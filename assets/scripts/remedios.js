@@ -26,7 +26,7 @@ function cartaRemedio(dato){
                             </div>
                             <div class="boton_card">
                                 <p>Comprar Ahora</p>
-                                <a href="#"><img src="./shop-car.png" alt=""></a>
+                                <a href="#"><img src="./assets/images/shop-car.png" alt=""></a>
                             </div>
                         </div>`
     }
