@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav:hover{
+    color:  #24a9e2 !important;
+}
+header i:hover{
+    color: #24a9e2;
+}
+
+header{
+    border-bottom: solid 1px gray;
+}
+footer img{
+    width: 100%;
+}
+
+main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 72px;
+  background: -webkit-linear-gradient(222deg, #3398DB, #8E43AD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px !important;
+}
