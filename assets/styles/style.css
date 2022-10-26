@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#background_image1 {
+    min-height: 70vh;
+    background-image: url(../images/fondo1.jpg);
+    background-size: contain;
+}
+
+nav {
+    height: 10vh;
+    filter: drop-shadow(3px 4px 5px #3A3A3A);
+}
+
 .nav:hover{
     color:  #24a9e2 !important;
 }
@@ -25,12 +42,26 @@ main{
     margin-bottom: 20px;
 }
 
-h3{
+h3 {
     font-size: 72px;
     background: -webkit-linear-gradient(222deg, #3398DB, #8E43AD);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 50px !important;
+}
+
+h4 {
+    font-size: 35px;
+    color: #646464;
+}
+
+.p_home {
+    font-size: 20px;
+    color: #646464;
+}
+
+.imagen_home_animales {
+    filter: drop-shadow(2px 5px 5px #3A3A3A);
 }
 
 /* MAIN */
@@ -119,4 +150,13 @@ main #cont_card {
     mask-size: cover;
     fill: rgb(36, 145, 72);
     height: 50%;
+}
+
+/* INICIO FOOTER */
+
+footer {
+    height: 60vh;
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    filter: drop-shadow(4px 5px 5px #3A3A3A);
 }
