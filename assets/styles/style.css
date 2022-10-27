@@ -71,6 +71,7 @@ main #cont_card_remedios , main #cont_card_juguetes {
     gap: 10rem;
     height: 100%;
 }
+
 /* CARTA COMIDA */
 #cont_card_remedios .item , #cont_card_juguetes .item{
     /* background-color: #e2ac24; */
@@ -151,6 +152,16 @@ main #cont_card_remedios , main #cont_card_juguetes {
     mask-size: cover;
     fill: rgb(36, 145, 72);
     height: 50%;
+}
+
+.mapa_contacto {
+    border-radius: 10px;
+    box-shadow: 4px 5px 5px #3A3A3A;
+}
+
+.container-form {
+    border-radius: 10px;
+    filter: drop-shadow(4px 5px 5px #3A3A3A);
 }
 
 /* INICIO FOOTER */
