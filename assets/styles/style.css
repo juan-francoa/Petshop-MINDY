@@ -164,6 +164,10 @@ main #cont_card_remedios , main #cont_card_juguetes {
     filter: drop-shadow(4px 5px 5px #3A3A3A);
 }
 
+.img-fluid{
+    height: 80px;
+}
+
 /* INICIO FOOTER */
 
 .footer_css {
