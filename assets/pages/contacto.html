@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Contacto - Mindy Pet Shop</title>
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="./assets/styles/style.css">
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/style.css">
+  <script src="../scripts/darkMode.js" type="text/javascript" defer></script>
 </head>
-
 <body>
   <header>
     <div class="d-flex justify-content-center align-items-center">
@@ -19,13 +19,13 @@
         src="https://th.bing.com/th/id/OIP.DOw9LSqgNUfI0nY0sx6orQHaHa?pid=ImgDet&rs=1" alt="logo dog">
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="d-flex align-items-center">
-          <a class="navbar-brand nav" href="../../index.html">Home</a>
+          <a class="navbar-brand nav" href="../../index.html">Inicio</a>
           <a class="navbar-brand nav" href="#">Contacto</a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle nav" style="color: black;" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
+                <a class="nav-link dropdown-toggle nav" style="color: black;" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
                   Productos
                 </a>
                 <ul class="dropdown-menu">
@@ -36,105 +36,78 @@
           </div>
           <a class="navbar-brand" href="#"><i class="bi bi-basket2-fill" style="font-size: 2rem;"></i></a>
         </div>
-
-      </nav>   
+        <label class="switch">
+          <input type="checkbox" id="slider" checked>
+          <span class="slider"></span>
+        </label>
+      </nav>
     </div>
   </header>
-  <main >
+  <main>
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 p-4">
+      <div class="container-form col-10 col-md-5 col-lg-5 ">
+        <div class="card rounded-3 shadow-none p-3 mb-5 bg-light rounded"
+          style="width: 25rem; --bs-border-opacity: .5;">
 
-     
-   
-       <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 p-4" >
-    <div class="container-form col-10 col-md-5 col-lg-5 ">
-        <div class="card rounded-3 shadow-none p-3 mb-5 bg-light rounded" style="width: 25rem; --bs-border-opacity: .5;">
-    
-            <h2 style="background-color: #24a9e2; height: 3rem;" class="  rounded-3  d-flex justify-content-center text-white">CONTACTO</h2>
-            <div class="card-body"  >
-   <form id="form" action="" method="get"  >
-       
-    
-    <fieldset class="mb-4">
-        <label for="firstname" placeholder="Escriba aqui">Nombre:</label>
-        <input type="text" class="form-input" id="firstname" placeholder="Ingrese su Nombre">
-    </fieldset>
-    <fieldset class="mb-3">
-        <label for="lastname">Apellido:</label>
-        <input type="text" class="form-input" id="lastname" placeholder="Ingrese su Apellido">
-    </fieldset>
-    <fieldset class="mb-4">
-        <label for="tel">Telefono:</label>
-        <input type="tel" class="form-input" id="tel">
-    </fieldset>
-    <div  class="d-flex flex-column align-items-center">
-    <fieldset class="mb-4 ">
-        <h5 >¿Que mascota tienes?</h5>
-        <select id="mascota" class="d-flex justify-content-center">
-            <option value="info" selected>Selecciona tu mascota</option>
-            <option value="perro">Perro</option>
-            <option value="gato">Gato</option>
-            <option value="hamster">Hámsters</option>
-            <option value="otro" >Otro...</option>
-        </select>
-    </fieldset>
-</div>
-<div  class="d-flex justify-content-end">
-
-    <fieldset class="mb-4 ">
-        <legend  class="d-flex justify-content-center">Comentarios</legend>
-        <textarea  name="comentarios" id="comentarios" maxlength="300"  style="width: 22rem; height: 5rem; " ></textarea>
-    </fieldset>
-</div>
-    <fieldset class="button-send d-flex justify-content-center">
-        <input type="submit" id="submit-btn" value="ENVIAR">
-    </fieldset>
-</form>
-</div>
-</div>
-</div>
-
-
-<div class="ubication d-flex flex-column align-items-center">
-  <h2 style="background-color: #24a9e2; height: 3rem; width: 25rem;" class="  rounded-3  d-flex justify-content-center text-white">UBICACIÓN</h2>
-  <p>Nos encontramos en Buenos Aires 📍</p>
-  <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.39707064038!2d-58.573384362124045!3d-34.61546111822767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2sco!4v1666812323090!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-</div>
-
-       </div>
+          <h2 style="background-color: #24a9e2; height: 3rem;"
+            class="  rounded-3  d-flex justify-content-center text-white">CONTACTO</h2>
+          <div class="card-body">
+            <form id="form" action="" method="get">
+              <fieldset class="mb-4">
+                <label for="firstname" placeholder="Escriba aqui">Nombre:</label>
+                <input type="text" class="form-input" id="firstname" placeholder="Ingrese su Nombre">
+              </fieldset>
+              <fieldset class="mb-3">
+                <label for="lastname">Apellido:</label>
+                <input type="text" class="form-input" id="lastname" placeholder="Ingrese su Apellido">
+              </fieldset>
+              <fieldset class="mb-4">
+                <label for="tel">Telefono:</label>
+                <input type="tel" class="form-input" id="tel">
+              </fieldset>
+              <div class="d-flex flex-column align-items-center">
+                <fieldset class="mb-4 ">
+                  <h5>¿Que mascota tienes?</h5>
+                  <select id="mascota" class="d-flex justify-content-center">
+                    <option value="info" selected>Selecciona tu mascota</option>
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                    <option value="hamster">Hámsters</option>
+                    <option value="otro">Otro...</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="d-flex justify-content-end">
+                <fieldset class="mb-4 ">
+                  <legend class="d-flex justify-content-center">Comentarios</legend>
+                  <textarea name="comentarios" id="comentarios" maxlength="300"
+                    style="width: 22rem; height: 5rem; "></textarea>
+                </fieldset>
+              </div>
+              <fieldset class="button-send d-flex justify-content-center">
+                <input type="submit" id="submit-btn" value="ENVIAR">
+              </fieldset>
+            </form>
+          </div>
+        </div>
       </div>
-
-
-
+      <div class="ubication d-flex flex-column align-items-center">
+        <h2 style="background-color: #24a9e2; height: 3rem; width: 25rem;"
+          class="  rounded-3  d-flex justify-content-center text-white">UBICACIÓN</h2>
+        <p>Nos encontramos en Buenos Aires 📍</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.39707064038!2d-58.573384362124045!3d-34.61546111822767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2sco!4v1666812323090!5m2!1ses!2sco"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">" width="400" height="300" style="border:0;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    </div>
+    </div>
   </main>
   <footer class="back_footer">
-    <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 500" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><style>
-      .path-0{
-        animation:pathAnim-0 4s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-      }
-      @keyframes pathAnim-0{
-        0%{
-          d: path("M 0,500 C 0,500 0,250 0,250 C 105.24401913875596,222.7464114832536 210.48803827751192,195.4928229665072 301,211 C 391.5119617224881,226.5071770334928 467.2918660287081,284.7751196172249 555,273 C 642.7081339712919,261.2248803827751 742.3444976076554,179.40669856459328 856,191 C 969.6555023923446,202.59330143540672 1097.33014354067,307.5980861244019 1197,333 C 1296.66985645933,358.4019138755981 1368.334928229665,304.20095693779905 1440,250 C 1440,250 1440,500 1440,500 Z");
-        }
-        25%{
-          d: path("M 0,500 C 0,500 0,250 0,250 C 103.50239234449762,270.00956937799043 207.00478468899524,290.01913875598086 302,280 C 396.99521531100476,269.98086124401914 483.48325358851673,229.93301435406698 584,247 C 684.5167464114833,264.066985645933 799.0622009569377,338.2488038277512 889,332 C 978.9377990430623,325.7511961722488 1044.267942583732,239.07177033492823 1132,212 C 1219.732057416268,184.92822966507177 1329.8660287081339,217.46411483253587 1440,250 C 1440,250 1440,500 1440,500 Z");
-        }
-        50%{
-          d: path("M 0,500 C 0,500 0,250 0,250 C 99.31100478468898,239.32057416267943 198.62200956937795,228.64114832535887 283,225 C 367.37799043062205,221.35885167464113 436.82296650717706,224.75598086124398 527,250 C 617.1770334928229,275.244019138756 728.0861244019139,322.33492822966514 826,315 C 923.9138755980861,307.66507177033486 1008.8325358851675,245.9043062200957 1109,226 C 1209.1674641148325,206.0956937799043 1324.5837320574162,228.04784688995215 1440,250 C 1440,250 1440,500 1440,500 Z");
-        }
-        75%{
-          d: path("M 0,500 C 0,500 0,250 0,250 C 75.98086124401911,204.8803827751196 151.96172248803822,159.76076555023923 241,166 C 330.0382775119618,172.23923444976077 432.13397129186603,229.83732057416267 544,267 C 655.866028708134,304.1626794258373 777.5023923444976,320.8899521531101 890,304 C 1002.4976076555024,287.1100478468899 1105.8564593301435,236.60287081339715 1196,222 C 1286.1435406698565,207.39712918660285 1363.0717703349283,228.69856459330143 1440,250 C 1440,250 1440,500 1440,500 Z");
-        }
-        100%{
-          d: path("M 0,500 C 0,500 0,250 0,250 C 105.24401913875596,222.7464114832536 210.48803827751192,195.4928229665072 301,211 C 391.5119617224881,226.5071770334928 467.2918660287081,284.7751196172249 555,273 C 642.7081339712919,261.2248803827751 742.3444976076554,179.40669856459328 856,191 C 969.6555023923446,202.59330143540672 1097.33014354067,307.5980861244019 1197,333 C 1296.66985645933,358.4019138755981 1368.334928229665,304.20095693779905 1440,250 C 1440,250 1440,500 1440,500 Z");
-        }
-    }</style><defs><linearGradient id="gradient" x1="1%" y1="39%" x2="99%" y2="61%"><stop offset="5%" stop-color="#25a9e2"></stop><stop offset="95%" stop-color="#ee7bda"></stop></linearGradient></defs><path d="M 0,500 C 0,500 0,250 0,250 C 105.24401913875596,222.7464114832536 210.48803827751192,195.4928229665072 301,211 C 391.5119617224881,226.5071770334928 467.2918660287081,284.7751196172249 555,273 C 642.7081339712919,261.2248803827751 742.3444976076554,179.40669856459328 856,191 C 969.6555023923446,202.59330143540672 1097.33014354067,307.5980861244019 1197,333 C 1296.66985645933,358.4019138755981 1368.334928229665,304.20095693779905 1440,250 C 1440,250 1440,500 1440,500 Z" stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg>
-    <div>
-      
     </div>
     <div>
-
     </div>
   </footer>
 </body>
