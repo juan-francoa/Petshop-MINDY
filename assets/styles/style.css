@@ -64,26 +64,27 @@ h4 {
     filter: drop-shadow(2px 5px 5px #3A3A3A);
 }
 
+
 /* MAIN */
-main #cont_card {
+main #cont_card_remedios , main #cont_card_juguetes {
     padding: 20% ; 
     gap: 10rem;
     height: 100%;
 }
 /* CARTA COMIDA */
-#cont_card .item {
+#cont_card_remedios .item , #cont_card_juguetes .item{
     /* background-color: #e2ac24; */
     width: 11rem;
     height: 20rem;
 }
 
-#cont_card .card {
+#cont_card_remedios .card , #cont_card_juguetes .card{
     height: 77%;
     border-radius: 2rem;
     margin-bottom: 0.5rem;
 }
 
-#cont_card .card p {
+#cont_card_remedios .card p , #cont_card_juguetes .card p{
     color: #24a9e2;
     margin: 0%;
     width: 80%;
@@ -92,13 +93,13 @@ main #cont_card {
     font-weight: bolder;
 }
 
-#cont_card .card img {
+#cont_card_remedios .card img , #cont_card_juguetes .card img{
     border-radius: 2rem !important;
     height: 60%;
     object-fit: contain;
 }
 
-#cont_card .card .card_body{
+#cont_card_remedios .card .card_body , #cont_card_juguetes .card .card_body{
     padding: 0.2em;
     border-radius: 0 0 2rem 2rem;
     display: flex;
@@ -108,7 +109,7 @@ main #cont_card {
     background-color: #24a9e2;
 }
 
-#cont_card .card .card_body .card_text{
+#cont_card_remedios .card .card_body .card_text , #cont_card_juguetes .card .card_body .card_text{
     width: 100%;
     height: 80%;
     font-size: 0.8rem;
@@ -116,7 +117,7 @@ main #cont_card {
     color: white;
 }
 
-#cont_card .boton_card{
+#cont_card_remedios .boton_card , #cont_card_juguetes .boton_card {
     border: solid 1px rgb(191, 188, 188);
     display: flex;
     align-items: center;
@@ -127,7 +128,7 @@ main #cont_card {
     height: 14%;
 }
 
-#cont_card .boton_card p{
+#cont_card_remedios .boton_card p , #cont_card_juguetes .boton_card p{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,13 +141,13 @@ main #cont_card {
     font-size: 1rem;
 }
 
-#cont_card .boton_card a{
+#cont_card_remedios .boton_card a , #cont_card_juguetes .boton_card a {
     display: flex;
     align-items: center;
     height: 80%;
 }
 
-#cont_card .boton_card img{
+#cont_card_remedios .boton_card img , #cont_card_juguetes .boton_card img {
     mask-size: cover;
     fill: rgb(36, 145, 72);
     height: 50%;
