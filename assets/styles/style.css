@@ -166,28 +166,73 @@ main #cont_card_remedios , main #cont_card_juguetes {
 
 /* INICIO FOOTER */
 
-footer {
+footer{
+    margin-top: 0;
+}
+
+.footer_css {
     height: 60vh;
     background-image: url(../images/footer.png);
     background-size: cover;
-    filter: drop-shadow(4px 5px 5px #3A3A3A);
+    box-shadow: 5px 5px 5px #3A3A3A;
+}            
+
+.footer_contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: space-between;
+    padding: 375px;
 }
 
+.iconos_footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
 
+.descarga_footer {
+    width: 100px;
+    height: 75px;
+}
+
+.imagen_pagos {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.master_logo {
+    width: 50px;
+    height: 40px;
+}
+
+.visa_logo {
+    width: 70px;
+    height: 25px;
+}
 
 /*/////////////////DARK MODE//////////////////*/
 [data-theme="light"] {
-    background-image: url(../images/fondo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: hard-light;
+        background-image: url(../images/fondo1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-blend-mode: hard-light;
     --primary : #1e8fc0;
-    
 }
 
 [data-theme="dark"] {
+    background-image: url(../images/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: hard-light;
     --primary : #ed7bda;
-    --background: #000;
     --text: #fff;
 }
 
