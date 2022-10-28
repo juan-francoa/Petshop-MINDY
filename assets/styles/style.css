@@ -64,6 +64,108 @@ h4 {
     filter: drop-shadow(2px 5px 5px #3A3A3A);
 }
 
+.btn {
+    background-color: #24a9e2;
+    border: none;
+    color: white;
+    padding: 7px 7px 7px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.form-control1 {
+    height: 2.5em;
+    width: 15em;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1)
+        rgba(255, 255, 255, 0.1)
+    );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: grey;
+    font-size: 20px;
+    gap: 20px;
+}
+
+.form-control2 {
+    height: 2.5em;
+    width: 15em;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1)
+        rgba(255, 255, 255, 0.1)
+    );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control3 {
+    height: 8em;
+    width: 15em;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1)
+        rgba(255, 255, 255, 0.1)
+    );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.name_form {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.email_form {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.card_body{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
 
 /* MAIN */
 main #cont_card_remedios , main #cont_card_juguetes {
@@ -242,7 +344,8 @@ main #cont_card_remedios , main #cont_card_juguetes {
         background-attachment: fixed;
         background-size: cover;
         background-blend-mode: hard-light;
-    --primary : #1e8fc0;
+        --primary : #1e8fc0;
+    
 }
 
 [data-theme="dark"] {
@@ -300,11 +403,11 @@ main #cont_card_remedios , main #cont_card_juguetes {
     transition: .4s;
     border-radius: 50%;
 }
-  
+
 input:checked + .slider {
     background-color: var(--background);
 }
-  
+
 input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
