@@ -478,3 +478,9 @@ input:checked + .slider:before {
         
         }
     }
+@media screen and (max-width: 360px){
+    .tableflex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
