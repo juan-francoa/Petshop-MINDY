@@ -85,37 +85,45 @@ function filterSearch(values, data, main){
 }
 
 function imprProducto(arreglo, contCard){
-        let a = localStorage.getItem("carrito")
-        let c
-        if(!a){
-            a = []
-        }
-        if(a.includes(arreglo._id)){
-            c = "Quitar carrito"
-        }
-        else{
-            c = "Agregar carrito"
-        }
-        contCard.innerHTML += 
-        `<div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-5" style="width: 30%; height:auto;">
-                <img src="${arreglo.imagen}" class="img-fluid rounded-start pt-5" alt="...">
-            </div>
-            <div class="col-md-7">
-                <div class="card-body">
-                    <h5 class="card-title" >${arreglo.nombre}</h5>
-                    <p class="card-text">${arreglo.descripcion}</p>
-                    <button class ="btn " onclick = "agregarCarrito('${arreglo._id}')">
-                        <div class="boton_card">
-                            <p id="${arreglo._id}">${c}</p>
-                        </div>
-                    </button>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    let a = localStorage.getItem("carrito")
+    let c
+    if (!a) {
+        a = []
+    }
+    if (a.includes(arreglo._id)) {
+        c = "Quitar carrito"
+    }
+    else {
+        c = "Agregar carrito"
+    }
+    let gb = ""
+    if(arreglo.stock <= 3){
+        gb =  ` <p class="text-danger"> ULTIMAS  ${arreglo.stock}  UNIDADES </p> `
+    }
+
+    contCard.innerHTML +=
+
+
+        `
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="${arreglo.imagen}" alt="${arreglo.nombre}" class="img-fluid rounded-start">
+                </div>
+            <div class="col-md-8">
+            <div class="card-body ">
+                <h5 class="card-title">${arreglo.nombre} </h5>
+                <p class="card_text">$${arreglo.precio}</p>
+                <button class ="btn " onclick = "agregarCarrito('${arreglo._id}')">
+                ${gb}
+                <div class="boton_card">
+                <p id="${arreglo._id}">${c}</p>
+                </div>
+                </button>
                 </div>
             </div>
         </div>
-    </div>`
+        `
 }
 
 function imprimirCheckbox(main){
