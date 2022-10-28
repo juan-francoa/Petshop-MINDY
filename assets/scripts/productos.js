@@ -97,21 +97,25 @@ function imprProducto(arreglo, contCard){
             c = "Agregar carrito"
         }
         contCard.innerHTML += 
-        `<div class="item">
-        <div class="card">
-            <p>$${arreglo.precio}</p>
-            <img src="${arreglo.imagen}" alt="...">
-            <div class="card_body">
-                <p class="card_text">${arreglo.nombre}</p>
+        `<div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-5" style="width: 30%; height:auto;">
+                <img src="${arreglo.imagen}" class="img-fluid rounded-start pt-5" alt="...">
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <h5 class="card-title" >${arreglo.nombre}</h5>
+                    <p class="card-text">${arreglo.descripcion}</p>
+                    <button class ="btn " onclick = "agregarCarrito('${arreglo._id}')">
+                        <div class="boton_card">
+                            <p id="${arreglo._id}">${c}</p>
+                        </div>
+                    </button>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
         </div>
-        <button class ="btn " onclick = "agregarCarrito('${arreglo._id}')">
-
-         <div class="boton_card">
-               <p id="${arreglo._id}">${c}</p>
-               </div>
-               </button>
-               </div>`
+    </div>`
 }
 
 function imprimirCheckbox(main){

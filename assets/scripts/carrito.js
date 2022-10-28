@@ -4,6 +4,9 @@ let productos;
 let carrito = (JSON.parse(localStorage.getItem('carrito')));
 let total = document.getElementById("totalProductos")
 
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
 async function getId() {
   try {
     var dataApi = await (await fetch('https://apipetshop.herokuapp.com/api/articulos ')).json()
@@ -27,13 +30,13 @@ getId()
 function imprProducto(product) {
   contenedorCarrito.innerHTML += `
     <td scope="row" id="${product._id}">🟢</td>
-    <td class="table__productos">${product.nombre}</td> 
-    <td> <img src = "${product.imagen}" alt = "" style = "width: 8rem; "></img>  </td>
-    <td class="table__precio">$${product.precio}</td>
+    <td class="table__productos fw-bold " style="color:#24a9e2;"> ${product.nombre}</td> 
+    <td> <img class="rounded-3" src = "${product.imagen}" alt = "" style = "width: 8rem; "></img>  </td>
+    <td class="table__precio fw-bold" style="color:#24a9e2;">$${product.precio}</td>
         <td class="table__cantidad">
         
         <input type="number" min="1" max="${product.stock}" value="1" onclick = "agregarMasCarrito('${product._id}',value)">
-            <botton class="delete btn btn-danget"  onclick = "agregarCarrito('${product._id}')">x</botton> 
+            <botton class="delete btn btn-danger"  onclick = "agregarCarrito('${product._id}')">x</botton> 
         </td>
       </tr> 
       `
@@ -69,7 +72,9 @@ function impresora(carrito) {
   if (carrito.length > 0){
     carrito.forEach(imprProducto)
   } else {
-    contenedorCarrito.innerHTML = `<h2> No hay productos seleccionados</h2>`
+    contenedorCarrito.innerHTML = `<div class= "d-flex justify-content-end">
+    <img src="../images/error404.png" style = " width: 50rem; heigth = 50rem">
+    </div>`
   }
 }
 
