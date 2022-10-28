@@ -3,6 +3,7 @@ const contCardJu = document.getElementById('cont_card_juguetes')
 const checkbox = document.getElementById("cont_checkbox")
 const search = document.getElementById("cont_search")
 const title = document.getElementById('title')
+let carrito = []
 
 async function api(){
     try {
@@ -31,20 +32,41 @@ api()
 
 function imprProducto(arreglo, contCard){
         contCard.innerHTML += 
-                        `<div class="item">
-                            <div class="card">
-                                <p>$${arreglo.precio}</p>
-                                <img src="${arreglo.imagen}" alt="...">
-                                <div class="card_body">
-                                    <p class="card_text">${arreglo.nombre}</p>
-                                </div>
-                            </div>
-                            <div class="boton_card">
-                                <p>Comprar Ahora</p>
-                                <a href="#"><img src="../images/shop-car.png" alt=""></a>
-                            </div>
-                        </div>`
+        `<div class="item">
+        <div class="card">
+            <p>$${arreglo.precio}</p>
+            <img src="${arreglo.imagen}" alt="...">
+            <div class="card_body">
+                <p class="card_text">${arreglo.nombre}</p>
+            </div>
+        </div>
+        <button class ="btn " onclick = "agregarCarrito('${arreglo._id}')">
+
+         <div class="boton_card">
+               <p>Comprar Ahora</p>
+               </div>
+               </button>
+               </div>`
 }
+function agregarCarrito(id){
+    if(carrito.includes(id)){
+     let a = JSON.parse(localStorage.getItem("carrito"))
+     carrito = a.filter(element => element !== id)
+     localStorage.setItem('carrito', JSON.stringify(carrito))
+     console.log(carrito);
+    } else{
+        let a = JSON.parse(localStorage.getItem("carrito"))
+        if(a){
+            a.push(id)
+            localStorage.setItem('carrito', JSON.stringify(a))
+        } 
+        else{
+        carrito.push(id)
+        localStorage.setItem('carrito', JSON.stringify(carrito))
+        console.log(carrito);
+        }
+    }
+  }  
 
 function filterRadio(value, data, main){
     if(value == "flexRadioDefault1"){
@@ -64,19 +86,21 @@ function filterSearch(values, data, main){
 
 function imprProducto(arreglo, contCard){
         contCard.innerHTML += 
-                        `<div class="item">
-                            <div class="card">
-                                <p>$${arreglo.precio}</p>
-                                <img src="${arreglo.imagen}" alt="...">
-                                <div class="card_body">
-                                    <p class="card_text">${arreglo.nombre}</p>
-                                </div>
-                            </div>
-                            <div class="boton_card">
-                                <p>Comprar Ahora</p>
-                                <a href="#"><img src="../images/shop-car.png" alt=""></a>
-                            </div>
-                        </div>`
+        `<div class="item">
+        <div class="card">
+            <p>$${arreglo.precio}</p>
+            <img src="${arreglo.imagen}" alt="...">
+            <div class="card_body">
+                <p class="card_text">${arreglo.nombre}</p>
+            </div>
+        </div>
+        <button class ="btn " onclick = "agregarCarrito('${arreglo._id}')">
+
+         <div class="boton_card">
+               <p>Comprar Ahora</p>
+               </div>
+               </button>
+               </div>`
 }
 
 function imprimirCheckbox(main){
