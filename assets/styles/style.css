@@ -344,9 +344,9 @@ main #cont_card_remedios , main #cont_card_juguetes {
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
-        background-blend-mode: hard-light;
+        /* background-blend-mode: hard-light; */
         --primary : #1e8fc0;
-    
+        --text: #000;
 }
 
 [data-theme="dark"] {
@@ -355,7 +355,7 @@ main #cont_card_remedios , main #cont_card_juguetes {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    background-blend-mode: hard-light;
+    /* background-blend-mode: hard-light; */
     --primary : #ed7bda;
     --text: #fff;
 }
