@@ -3,6 +3,8 @@ const contCardJu = document.getElementById('cont_card_juguetes')
 const checkbox = document.getElementById("cont_checkbox")
 const search = document.getElementById("cont_search")
 const title = document.getElementById('title')
+
+
 let carrito = []
 
 async function api(){
@@ -30,38 +32,36 @@ async function api(){
 }
 api()
 
-function imprProducto(arreglo, contCard){
-        contCard.innerHTML += 
-        `<div class="item">
-        <div class="card">
-            <p>$${arreglo.precio}</p>
-            <img src="${arreglo.imagen}" alt="...">
-            <div class="card_body">
-                <p class="card_text">${arreglo.nombre}</p>
-            </div>
-        </div>
-        <button class ="btn " onclick = "agregarCarrito('${arreglo._id}')">
 
-         <div class="boton_card">
-               <p>Comprar Ahora</p>
-               </div>
-               </button>
-               </div>`
-}
 function agregarCarrito(id){
-    if(carrito.includes(id)){
-     let a = JSON.parse(localStorage.getItem("carrito"))
+    let a = JSON.parse(localStorage.getItem("carrito"))
+    //console.log(a.includes(id), id, a)
+    let agregarQuitar = document.getElementById(id)
+    if(!a){
+        a = []
+    }
+
+    if(a.includes(id)){
      carrito = a.filter(element => element !== id)
+     agregarQuitar.textContent = `Agregar carrito`
      localStorage.setItem('carrito', JSON.stringify(carrito))
      console.log(carrito);
     } else{
         let a = JSON.parse(localStorage.getItem("carrito"))
         if(a){
-            a.push(id)
+            if(a.includes(id)){
+                a = a.filter(value => value._id !== id)
+                agregarQuitar.textContent = `Agregar carrito`
+            }
+            else{
+                a.push(id)
+                agregarQuitar.textContent= `Quitar carrito`
+            }
             localStorage.setItem('carrito', JSON.stringify(a))
         } 
         else{
         carrito.push(id)
+        agregarQuitar.textContent = `Quitar carrito`
         localStorage.setItem('carrito', JSON.stringify(carrito))
         console.log(carrito);
         }
@@ -85,6 +85,17 @@ function filterSearch(values, data, main){
 }
 
 function imprProducto(arreglo, contCard){
+        let a = localStorage.getItem("carrito")
+        let c
+        if(!a){
+            a = []
+        }
+        if(a.includes(arreglo._id)){
+            c = "Quitar carrito"
+        }
+        else{
+            c = "Agregar carrito"
+        }
         contCard.innerHTML += 
         `<div class="item">
         <div class="card">
@@ -97,7 +108,7 @@ function imprProducto(arreglo, contCard){
         <button class ="btn " onclick = "agregarCarrito('${arreglo._id}')">
 
          <div class="boton_card">
-               <p>Comprar Ahora</p>
+               <p id="${arreglo._id}">${c}</p>
                </div>
                </button>
                </div>`

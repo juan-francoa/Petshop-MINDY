@@ -18,7 +18,7 @@ async function getId() {
 
   productos.forEach(imprProducto)
   let a = productos.reduce((a,b) => a+=b.precio,0)
-  total.innerHTML = `Total :  ${a} `
+  total.innerHTML = `Total : $ ${a} `
 }
 
 getId()
@@ -31,21 +31,43 @@ function imprProducto(product) {
     <td> <img src = "${product.imagen}" alt = "" style = "width: 8rem; "></img>  </td>
     <td class="table__precio">$${product.precio}</td>
         <td class="table__cantidad">
-            <input type="number" min="1" value="1" >
+        
+        <input type="number" min="1" max="${product.stock}" value="1" onclick = "agregarMasCarrito('${product._id}',value)">
             <botton class="delete btn btn-danget"  onclick = "agregarCarrito('${product._id}')">x</botton> 
         </td>
       </tr> 
       `
 }
 
+async function agregarMasCarrito(id, value){
+  try {
+    let dataApi = await (await fetch('https://apipetshop.herokuapp.com/api/articulos ')).json()
+    let ab = await JSON.parse(localStorage.getItem("carrito"))
+    let c = dataApi.response.filter(value => ab.includes(value._id))
+    let cd = 0
+    c.find(function(a){
+      if(a._id.includes(id))
+      {
+      cd +=  a.precio*Number(value)
+      }
+      else{
+       
+        cd += a.precio
+      }} )
+    total.innerHTML = `Total : $ ${cd} `
+    
+  } catch (error) {
+    console.log(error);
+  }
+  
+}
 
 function impresora(carrito) {
   contenedorCarrito.innerHTML = ''
   let a = carrito.reduce((a,b) => a+=b.precio,0)
-  total.innerHTML = `Total :  ${a} `
+  total.innerHTML = `Total : $ ${a} `
   if (carrito.length > 0){
     carrito.forEach(imprProducto)
-    total(carrito,total)
   } else {
     contenedorCarrito.innerHTML = `<h2> No hay productos seleccionados</h2>`
   }
